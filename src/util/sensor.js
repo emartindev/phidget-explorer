@@ -39,12 +39,12 @@ const triggerData = {
 
 
 async function runExplorer() {
-  // const conn = new phidget22.USBConnection();
+  const conn = new phidget22.USBConnection();
 
-    const conn = new phidget22.NetworkConnection({
-        hostname: 'localhost',
-        port: 5661,
-    });
+    // const conn = new phidget22.NetworkConnection({
+    //     hostname: 'localhost',
+    //     port: 5661,
+    // });
     await conn.connect();
 
     const vintHub = new phidget22.Hub();
