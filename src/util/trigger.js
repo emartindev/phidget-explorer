@@ -35,6 +35,6 @@ app.post('/trigger-command', (req, res) => {
   i++;
 });
 
-app.listen(8081, () => {
-  console.log('Server listening on port 8081!');
+app.listen(7070, () => {
+  console.log('Server listening on port 7070!');
 });

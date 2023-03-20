@@ -6,7 +6,6 @@ const net = require('net');
 
 
 const app = express();
-const port = 8080;
 let COMMAND = null;
 
 app.use(cors());
@@ -40,12 +39,12 @@ const triggerData = {
 
 
 async function runExplorer() {
-  const conn = new phidget22.USBConnection();
+  // const conn = new phidget22.USBConnection();
 
-    // const conn = new phidget22.NetworkConnection({
-    //     hostname: 'localhost',
-    //     port: 5661,
-    // });
+    const conn = new phidget22.NetworkConnection({
+        hostname: 'localhost',
+        port: 5661,
+    });
     await conn.connect();
 
     const vintHub = new phidget22.Hub();

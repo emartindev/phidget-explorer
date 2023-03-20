@@ -5,6 +5,7 @@ import SensorInformation from "./SensorInformation";
 export default function SensorData() {
   const [sensorData, setSensorData] = useState([]);
   const [triggerData, setTriggerData] = useState([]);
+  const [connected, setConnected] = useState(false);
 
   useEffect(() => {
     setInterval(() => {
@@ -21,6 +22,8 @@ export default function SensorData() {
         .then((data) => setTriggerData(data));
     }, 1000);
   }, []);
+
+
 
   // console.log("Sensor data: ", sensorData);
 
@@ -43,6 +46,7 @@ export default function SensorData() {
 
   return (
     <>
+
       <div className={styles.sensorGrid}>
         <div className={styles.sensor}>
           <h3>Sensor 1: {sensorData.sensorOneDistance}</h3>
