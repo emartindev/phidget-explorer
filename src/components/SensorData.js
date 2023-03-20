@@ -28,7 +28,7 @@ export default function SensorData() {
   // console.log("Sensor data: ", sensorData);
 
   const handleTrigger = () => {
-    fetch('http://127.0.0.1:8081/trigger-command', {
+    fetch('http://127.0.0.1:7070/trigger-command', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
