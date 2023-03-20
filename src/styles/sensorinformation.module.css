@@ -1,0 +1,28 @@
+.sensorGrid {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.sensor {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.tcpGrid {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.tcp {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.hub {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
