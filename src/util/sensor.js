@@ -31,7 +31,7 @@ const triggerData = {
   count: 0, // counts the number of triggers sent
   tcpClient: {
     // settings for connecting to the TCP client
-    addr: "127.0.0.1",
+    addr: "192.168.14.141",
     port: 8744,
   },
   timestamp: null, // stores the time of request triggering
