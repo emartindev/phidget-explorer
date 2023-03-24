@@ -105,6 +105,22 @@ async function runExplorer() {
   await distanceSensor1.open(5000);
   await distanceSensor2.open(5000);
   await distanceSensor3.open(5000);
+
+  await distanceSensor0.setSonarQuietMode(false);
+  await distanceSensor1.setSonarQuietMode(false);
+  await distanceSensor2.setSonarQuietMode(false);
+  await distanceSensor3.setSonarQuietMode(false);
+
+  await distanceSensor0.setDataInterval(100);
+  await distanceSensor1.setDataInterval(100);
+  await distanceSensor2.setDataInterval(100);
+  await distanceSensor3.setDataInterval(100);
+
+  
+
+
+
+
 }
 runExplorer();
 
@@ -154,5 +170,6 @@ app.get('/trigger-data', (req, res) => {
 
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+

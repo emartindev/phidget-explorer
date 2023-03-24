@@ -9,7 +9,7 @@ export default function SensorData() {
 
   useEffect(() => {
     setInterval(() => {
-      fetch("http://localhost:5000/sensor-data")
+      fetch("http://localhost:8080/sensor-data")
         .then((res) => res.json())
         .then((data) => setSensorData(data));
     }, 1000);
@@ -17,7 +17,7 @@ export default function SensorData() {
 
   useEffect(() => {
     setInterval(() => {
-      fetch("http://localhost:5000/trigger-data")
+      fetch("http://localhost:8080/trigger-data")
         .then((res) => res.json())
         .then((data) => setTriggerData(data));
     }, 1000);
